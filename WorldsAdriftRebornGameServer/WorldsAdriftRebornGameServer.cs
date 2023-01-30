@@ -36,6 +36,8 @@ namespace WorldsAdriftRebornGameServer
 
         static unsafe void Main( string[] args )
         {
+            DependencyLoader.LoadDependencies();
+
             Console.CancelKeyPress += delegate ( object? sender, ConsoleCancelEventArgs e )
             {
                 keepRunning = false;

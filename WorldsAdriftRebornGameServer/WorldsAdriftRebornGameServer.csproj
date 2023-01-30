@@ -10,6 +10,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GtkSharp" Version="3.24.24.38" />
+    <PackageReference Include="protobuf-net" Version="2.0.0.668" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\WorldsAdriftRebornCoreSdk\WorldsAdriftRebornCoreSdk.vcxproj">
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <OutputItemType>Content</OutputItemType>
@@ -20,12 +25,11 @@
   <ItemGroup>
     <Reference Include="Generated.Code">
       <HintPath>$(WorldsAdriftGameDir)\UnityClient@Windows_Data\Managed\Generated.Code.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Improbable.WorkerSdkCsharp">
       <HintPath>$(WorldsAdriftGameDir)\UnityClient@Windows_Data\Managed\Improbable.WorkerSdkCsharp.dll</HintPath>
-    </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>$(WorldsAdriftGameDir)\UnityClient@Windows_Data\Managed\protobuf-net.dll</HintPath>
+      <!--<Private>False</Private> -->
     </Reference>
   </ItemGroup>
 
