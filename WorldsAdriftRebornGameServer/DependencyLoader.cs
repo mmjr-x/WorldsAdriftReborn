@@ -70,9 +70,9 @@ namespace WorldsAdriftRebornGameServer
                 Console.WriteLine($"Failed to resolve required game assembly (\"{args.Name}\")");
 
                 Application.Init();
-                Window window = new Window("");
+                Window window = new("");
 
-                FileChooserNative fileChooser = new FileChooserNative(
+                FileChooserNative fileChooser = new(
                     "Select the required game assemblies (can be found in \"<game root>\\UnityClient@Windows_Data\\Managed\")",
                     window,
                     FileChooserAction.Open,
@@ -80,7 +80,7 @@ namespace WorldsAdriftRebornGameServer
                     "Cancel"
                 );
                 fileChooser.SelectMultiple = true;
-                FileFilter fileFilter = new FileFilter();
+                FileFilter fileFilter = new();
 
                 foreach (string requiredAssemblyFullName in requiredAssemblyFullNames)
                 {
@@ -108,7 +108,6 @@ namespace WorldsAdriftRebornGameServer
                     }
 
                 }
-
 
                 fileChooser.Destroy();
 
